@@ -1,0 +1,129 @@
+:root {
+  --bg-main: #0f1220;
+  --bg-panel: #161a2e;
+  --bg-soft: #1e2340;
+
+  --accent-primary: #7f8cff;
+  --accent-secondary: #4fd1c5;
+  --accent-danger: #ff6b6b;
+
+  --text-main: #e6e9ff;
+  --text-muted: #a0a6d1;
+
+  --border-soft: rgba(255, 255, 255, 0.08);
+
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.4s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #14183a, var(--bg-main));
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: #0f1220;
+  font-weight: 600;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(127, 140, 255, 0.35);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
+}
+
+button.secondary:hover {
+  background: var(--bg-soft);
+}
+
+button.danger {
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+}
+
+.panel {
+  background: var(--bg-panel);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
