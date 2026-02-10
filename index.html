@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TIC-TAC-TOE</title>
+
+  <!-- Global Design System -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- Intro Page Styles -->
+  <link rel="stylesheet" href="css/intro.css" />
+</head>
+<body>
+
+  <main class="intro-container">
+
+    <!-- Header -->
+    <header class="intro-header">
+      <h1 class="game-title">TIC-TAC-TOE</h1>
+      <p class="game-tagline">
+        A strategic tic-tac-toe experience with human and AI gameplay
+      </p>
+    </header>
+
+    <!-- Configuration Panel -->
+<section class="config-panel">
+
+  <!-- Scrollable Content -->
+  <div class="config-body">
+
+    <!-- Mode Selection -->
+    <div class="config-section">
+      <h2>Choose Game Mode</h2>
+
+      <div class="mode-options">
+        <label class="mode-card">
+          <input type="radio" name="mode" value="HUMAN_HUMAN" checked />
+          <span>Human vs Human</span>
+        </label>
+
+        <label class="mode-card">
+          <input type="radio" name="mode" value="HUMAN_AI" />
+          <span>Human vs AI</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Player Setup -->
+    <div class="config-section">
+      <h2>Player Setup</h2>
+
+      <div class="player-inputs">
+        <input
+          type="text"
+          id="playerX"
+          placeholder="Player X Name"
+          required
+        />
+
+        <input
+          type="text"
+          id="playerO"
+          placeholder="Player O Name"
+        />
+      </div>
+    </div>
+
+    <!-- AI Difficulty -->
+    <div class="config-section" id="aiDifficultySection">
+      <h2>AI Difficulty</h2>
+
+      <div class="difficulty-options">
+        <label>
+          <input type="radio" name="difficulty" value="EASY" checked />
+          Easy
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="MEDIUM" />
+          Medium
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="HARD" />
+          Hard
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Fixed Footer -->
+  <div class="config-footer">
+    <button id="startGameBtn">Enter Arena</button>
+  </div>
+
+</section>
+
+
+  </main>
+
+  <!-- JS -->
+  <script src="js/config.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

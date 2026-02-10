@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindPlay Arena | Results</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/result.css" />
+</head>
+<body>
+
+  <!-- SAFE DEFAULT CONFIG -->
+  <script>
+    const gameConfig = {
+      mode: "HUMAN_HUMAN",
+      difficulty: "EASY",
+      playerX: "Player X",
+      playerO: "Player O"
+    };
+  </script>
+
+  <main class="result-container">
+
+    <header class="result-header">
+      <h1 id="resultTitle">Match Summary</h1>
+      <p id="winnerText">Winner</p>
+    </header>
+
+    <section class="score-summary">
+
+      <h2>Game Statistics</h2>
+
+      <div class="score-cards">
+        <div class="score-card">
+          <span class="player-label">Rounds Played</span>
+          <span class="score-value" id="roundsPlayed">0</span>
+        </div>
+
+        <div class="score-card">
+          <span class="player-label" id="finalPlayerX">Player X</span>
+          <span class="score-value" id="finalScoreX">0</span>
+        </div>
+
+        <div class="score-card">
+          <span class="player-label" id="finalPlayerO">Player O</span>
+          <span class="score-value" id="finalScoreO">0</span>
+        </div>
+
+        <div class="score-card draw">
+          <span class="player-label">Draws</span>
+          <span class="score-value" id="finalScoreDraw">0</span>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="result-actions">
+          <button id="goHomeBtn" class="secondary">Home</button>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script src="js/gameState.js"></script>
+  <script src="js/navigation.js"></script>
+
+</body>
+</html>

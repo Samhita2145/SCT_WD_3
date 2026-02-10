@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindPlay Arena | Game</title>
+
+  <!-- Global Design System -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- Game Page Styles -->
+  <link rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+
+  <!-- SAFE DEFAULT CONFIG-->
+  <script>
+    const gameConfig = {
+      mode: "HUMAN_HUMAN",
+      difficulty: "EASY",
+      playerX: "Player X",
+      playerO: "Player O"
+    };
+  </script>
+
+  <main class="game-container">
+
+    <!-- Sidebar -->
+    <aside class="game-sidebar">
+
+      <div class="sidebar-section">
+        <h3>Game Mode</h3>
+        <p id="modeText">Human vs Human</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Round</h3>
+        <p id="roundText">Round 1</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Current Turn</h3>
+        <p id="turnText">Player X</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Scoreboard</h3>
+        <ul class="score-list">
+          <li>X (<span id="playerXName">Player X</span>):
+            <strong id="scoreX">0</strong>
+          </li>
+          <li>O (<span id="playerOName">Player O</span>):
+            <strong id="scoreO">0</strong>
+          </li>
+          <li>Draws: <strong id="scoreDraw">0</strong></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section" id="aiInsightSection">
+        <h3>AI Insight</h3>
+        <p id="aiInsightText">Waiting for AI move...</p>
+      </div>
+
+      <div class="sidebar-actions">
+        <button id="restartRoundBtn">Restart Round</button>
+        <button id="endMatchBtn" class="danger">End Match</button>
+      </div>
+
+    </aside>
+
+    <!-- Game Board -->
+    <section class="board-container">
+      <div class="board" id="gameBoard">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Round Result Modal -->
+  <div id="roundModal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="roundResultText">Round Complete</h2>
+      <p id="scoreSummaryText"></p>
+
+      <div class="modal-actions">
+        <button id="continueBtn">Continue</button>
+        <button id="endGameBtn" class="danger">End Game</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS (ORDER MATTERS) -->
+  <script src="js/gameState.js"></script>
+  <script src="js/gameLogic.js"></script>
+  <script src="js/aiLogic.js"></script>
+  <script src="js/uiController.js"></script>
+
+</body>
+</html>
