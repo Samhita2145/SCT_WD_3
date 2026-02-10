@@ -43,4 +43,4 @@ SCT_Web_3
 ## 🚀 Live Demo
 
 👉 **Demo Link:**  
-https://Samhita2145.github.io/SCT_Web_3/
+https://samhita2145.github.io/SCT_WD_3/
